@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 
 class Bandit:
@@ -243,6 +244,10 @@ def plot_rewards(
     )
 
     plt.tight_layout()
+    output_path = Path(__file__).resolve().parent / "figures" / "01_bandit_single.png"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    plt.savefig(output_path, dpi=150)
+    print(f"Figure saved to: {output_path}")
     plt.show()
 
 

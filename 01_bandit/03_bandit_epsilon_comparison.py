@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 
 class Bandit:
@@ -336,55 +337,31 @@ def run_epsilon_comparison(
     return results
 
 
-def plot_average_reward(
-    results: dict,
-) -> None:
-    """
-    在同一张图中绘制不同 ε 的 Average Reward 曲线。
-    """
-    plt.figure(figsize=(10, 5))
-
+def plot_results(results: dict) -> None:
+    """在一张图中并排绘制两项指标，并保存到脚本所在目录的 figures 文件夹。"""
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
     for epsilon, result in results.items():
-        plt.plot(
-            result["average_rewards"],
-            label=f"epsilon={epsilon}",
-        )
+        label = f"epsilon={epsilon}"
+        axes[0].plot(result["average_rewards"], label=label)
+        axes[1].plot(result["optimal_action_rates"] * 100, label=label)
 
-    plt.xlabel("Step")
-    plt.ylabel("Average Reward")
-    plt.title(
-        "Average Reward: "
-        "Comparison of Different Epsilon Values"
-    )
+    axes[0].set_title("Average Reward")
+    axes[0].set_xlabel("Step")
+    axes[0].set_ylabel("Average Reward")
+    axes[1].set_title("Optimal Action Rate")
+    axes[1].set_xlabel("Step")
+    axes[1].set_ylabel("Optimal Action (%)")
+    axes[1].set_ylim(0, 100)
+    for ax in axes:
+        ax.grid(alpha=0.3)
+        ax.legend()
+    fig.suptitle("Epsilon Comparison")
+    fig.tight_layout()
 
-    plt.legend()
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_optimal_action_rate(
-    results: dict,
-) -> None:
-    """
-    在同一张图中绘制不同 ε 的 Optimal Action Rate 曲线。
-    """
-    plt.figure(figsize=(10, 5))
-
-    for epsilon, result in results.items():
-        plt.plot(
-            result["optimal_action_rates"] * 100,
-            label=f"epsilon={epsilon}",
-        )
-
-    plt.xlabel("Step")
-    plt.ylabel("Optimal Action (%)")
-    plt.title(
-        "Optimal Action Rate: "
-        "Comparison of Different Epsilon Values"
-    )
-
-    plt.legend()
-    plt.tight_layout()
+    output_path = Path(__file__).resolve().parent / "figures" / "03_bandit_epsilon_comparison.png"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(output_path, dpi=150)
+    print(f"Figure saved to: {output_path}")
     plt.show()
 
 
@@ -447,9 +424,7 @@ def main() -> None:
 
     print_final_results(results)
 
-    plot_average_reward(results)
-
-    plot_optimal_action_rate(results)
+    plot_results(results)
 
 
 if __name__ == "__main__":

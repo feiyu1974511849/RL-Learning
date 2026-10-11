@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 
 class Bandit:
@@ -345,63 +346,29 @@ def run_multiple_bandits(
     return average_rewards, optimal_action_rates
 
 
-def plot_average_reward(
-    average_rewards: np.ndarray,
-    epsilon: float,
-) -> None:
-    """
-    绘制多次独立实验后的平均奖励曲线。
+def plot_results(average_rewards: np.ndarray, optimal_action_rates: np.ndarray, epsilon: float) -> None:
+    """在一张图中并排绘制两项指标，并保存到脚本所在目录的 figures 文件夹。"""
+    fig, axes = plt.subplots(1, 2, figsize=(14, 5))
+    axes[0].plot(average_rewards, label=f"epsilon={epsilon}")
+    axes[1].plot(optimal_action_rates * 100, label=f"epsilon={epsilon}")
 
-    Parameters
-    ----------
-    average_rewards : np.ndarray
-        每个时间步上的平均奖励。
-    epsilon : float
-        当前实验使用的探索概率。
-    """
-    plt.figure(figsize=(10, 5))
+    axes[0].set_title("Average Reward")
+    axes[0].set_xlabel("Step")
+    axes[0].set_ylabel("Average Reward")
+    axes[1].set_title("Optimal Action Rate")
+    axes[1].set_xlabel("Step")
+    axes[1].set_ylabel("Optimal Action (%)")
+    axes[1].set_ylim(0, 100)
+    for ax in axes:
+        ax.grid(alpha=0.3)
+        ax.legend()
+    fig.suptitle("Multiple Bandit Runs")
+    fig.tight_layout()
 
-    plt.plot(average_rewards)
-
-    plt.xlabel("Step")
-    plt.ylabel("Average Reward")
-    plt.title(
-        f"Average Reward (epsilon={epsilon})"
-    )
-
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_optimal_action_rate(
-    optimal_action_rates: np.ndarray,
-    epsilon: float,
-) -> None:
-    """
-    绘制最优动作选择比例曲线。
-
-    Parameters
-    ----------
-    optimal_action_rates : np.ndarray
-        每个时间步上，选择真实最优动作的比例。
-        数值范围为 [0, 1]。
-    epsilon : float
-        当前实验使用的探索概率。
-    """
-    plt.figure(figsize=(10, 5))
-
-    # 乘以 100，将比例转换为百分比。
-    plt.plot(
-        optimal_action_rates * 100
-    )
-
-    plt.xlabel("Step")
-    plt.ylabel("Optimal Action (%)")
-    plt.title(
-        f"Optimal Action Rate (epsilon={epsilon})"
-    )
-
-    plt.tight_layout()
+    output_path = Path(__file__).resolve().parent / "figures" / "02_bandit_multiple_runs.png"
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(output_path, dpi=150)
+    print(f"Figure saved to: {output_path}")
     plt.show()
 
 
@@ -455,12 +422,8 @@ def main() -> None:
 
     print("=" * 60)
 
-    plot_average_reward(
+    plot_results(
         average_rewards=average_rewards,
-        epsilon=epsilon,
-    )
-
-    plot_optimal_action_rate(
         optimal_action_rates=optimal_action_rates,
         epsilon=epsilon,
     )

@@ -1,0 +1,272 @@
+{
+  "main": {
+    "id": "355123dab5fc8a63",
+    "type": "split",
+    "children": [
+      {
+        "id": "e89af7892eeb19e0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e51cda483aae4f12",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "0. 强化学习大纲.canvas",
+                "viewState": {
+                  "x": -392.5,
+                  "y": 0,
+                  "zoom": -0.5813807059087605
+                }
+              },
+              "icon": "lucide-layout-dashboard",
+              "title": "0. 强化学习大纲"
+            }
+          },
+          {
+            "id": "e8d0241c6b198e4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1. 强化学习基础.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "1. 强化学习基础"
+            }
+          },
+          {
+            "id": "4f3b2eb962c09289",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d9a0be7aa9693d7f",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c31e3538b815515",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8ee0c28a25947436",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "3e993c72337427d7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "b0a450cbd6e428a2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 354.5
+  },
+  "right": {
+    "id": "73e94d099b0fc8ff",
+    "type": "split",
+    "children": [
+      {
+        "id": "200e6ca2a4343885",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "30db098e3ef86cba",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "fedd310de424c1b3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "1. 强化学习基础.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "1. 强化学习基础 的出链列表"
+            }
+          },
+          {
+            "id": "998a977915129bcf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "a290ca90a9e33de5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "1. 强化学习基础.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          },
+          {
+            "id": "3ee0fd6f8f8c8759",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 268.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "bases:新建数据库": false,
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false,
+      "obsidian-git:Open Git source control": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "e8d0241c6b198e4d",
+  "lastOpenFiles": [
+    "未命名.md",
+    "1. 强化学习基础.md",
+    "img/演员评论家漫画.jpg",
+    "img/线搜索和置信域比较.png",
+    "img/使用PPO玩倒立摆的收益变化图.png",
+    "img/木杆快倒下示意图.jpg",
+    "img/动作价值函数和价值函数和优势函数的公式.png",
+    "img/纯强化学习和监督学习加强化学习对比.png",
+    "img/策略梯度法的问题.png",
+    "img/策略梯度法步子太大.png",
+    "papers/ppo.pdf",
+    "papers/SimPO.pdf",
+    "papers/trpo.pdf",
+    "papers/dapo.pdf",
+    "papers/kto.pdf",
+    "papers/gspo.pdf",
+    "papers/grpo.pdf",
+    "papers/gae.pdf",
+    "papers/dpo.pdf",
+    "Drawing 2025-09-15 08.44.38.excalidraw.md",
+    "0. 强化学习大纲.canvas",
+    "2. 策略梯度法.md",
+    "附录C：广义优势估计（GAE）.md",
+    "附录E：策略梯度法的证明.md",
+    "附录F：重要性采样.md",
+    "附录G：uv教程.md",
+    "附录D：PPO数学推导.md",
+    "附录B：KL散度.md",
+    "附录A：自己实现倒立摆环境.md",
+    "9. 思维链（Chain of Thoughts）.md",
+    "8. 使用DPO微调LLM.md",
+    "7. DPO：直接偏好优化.md",
+    "6. 使用PPO微调LLM.md",
+    "5. 基于人类反馈的强化学习（RLHF）.md",
+    "4. 使用 PPO 玩倒立摆游戏.md",
+    "3. 策略梯度法的问题以及解决方案：PPO.md",
+    "Excalidraw/2.3.excalidraw.md",
+    "Excalidraw/1.5.excalidraw.md",
+    "Excalidraw/PPO-Ratio.excalidraw.md",
+    "Excalidraw/重要性采样-1.excalidraw.md",
+    "Excalidraw/重要性采样-2.excalidraw.md",
+    "Excalidraw/重要性采样-3.excalidraw.md",
+    "img/置信域KdeleteL散度公式.png",
+    "PPO推ddd导-de2.png",
+    "Excalidraw/3.4.excalidraw.md",
+    "papers/未确认 819949.crdownload",
+    "Untitled.canvas"
+  ]
+}
